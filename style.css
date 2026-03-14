@@ -285,12 +285,7 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
-.section-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    margin-bottom: 4rem;
-    max-width: 600px;
-}
+.slim-header { font-size: 0.8rem; font-family: var(--font-mono); color: var(--neon-cyan); text-transform: uppercase; letter-spacing: 0.4em; margin-bottom: 3rem; opacity: 0.6; transition: opacity 0.5s ease; }
 
 /* Scroll Animations */
 .staggered-fade {
@@ -1492,3 +1487,4 @@ footer {
     .content-grid { grid-template-columns: 1fr; }
     .cta-button { padding: 1rem 2rem; font-size: 1rem; }
 }
+
