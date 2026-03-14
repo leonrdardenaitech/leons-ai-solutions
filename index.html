@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Consulting and Portfolio showcasing Prompt Engineering and and AI Integration. Enhance your business with our Sample Products.">
+    <title>Sample Products - Enhance Your Business with AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="background-effects">
+        <div class="rainbow-spectrum"></div>
+        <div class="grid-scan"></div>
+        <div class="cursor-glow pulse-effect"></div>
+    </div>
+
+    <header class="glass-header">
+        <div class="header-container">
+            <h1 class="neon-title" aria-label="Sample Products. Enhance Your Business with AI">
+                <span class="title-main">Sample Products</span>
+                <span class="title-sub">Enhance Your Business with AI</span>
+            </h1>
+            <nav>
+                <a href="index.html#service-tools" class="nav-link">Service Industry Tools</a>
+                <a href="index.html#practical-use" class="nav-link">For Practical Use</a>
+                <a href="index.html#in-development" class="nav-link">In Development</a>
+                <a href="index.html#core-competencies" class="nav-link">Core Competencies</a>
+                <a href="case-studies.html" class="nav-link outline-link" style="border: 1px solid var(--neon-cyan); border-radius: 4px; padding: 0.3rem 0.8rem;">Case Studies</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="service-tools" class="content-section section-bg-1">
+            <div class="glass-overlay staggered-fade">
+                <h2 class="section-title text-glow">Service Industry Tools</h2>
+                <p class="section-subtitle">Intelligent solutions designed to optimize customer-facing operations.</p>
+                <div class="content-grid">
+                    <div class="card hover-tilt">
+                        <h3>The Chatbot & Voice Agent</h3>
+                        <p>Integrating your existing systems with AI Solutions.</p>
+                    </div>
+                </div>
+                
+                <!-- AI Interaction Widgets Container -->
+                <div class="ai-widgets-container">
+                    <!-- Chat Widget Mockup -->
+                    <div class="chat-widget">
+                        <div class="chat-header">
+                            <h4>AI Assistant</h4>
+                            <span class="status-dot"></span>
+                        </div>
+                        <div class="chat-body" id="chat-body">
+                            <div class="chat-message bot">
+                                <p>Hello! How can I help you streamline your operations today?</p>
+                            </div>
+                        </div>
+                        <div class="chat-footer">
+                            <input type="text" id="chat-input" placeholder="Ask about catering..." onkeypress="handleChatInput(event)">
+                            <button id="chat-send" onclick="sendChatMessage()" aria-label="Send Message">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Voice Call Widget Mockup -->
+                    <div class="voice-call-widget hover-tilt">
+                        <div class="voice-call-content">
+                            <div class="voice-avatar">
+                                <div class="avatar-ring"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--neon-pink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                            </div>
+                            <h3>Call AI Assistant</h3>
+                            <p>Speak directly with our enterprise intelligence node.</p>
+                            
+                            <div class="waveform-container" id="waveform">
+                                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                            </div>
+                            
+                            <audio id="ai-voice" src="ai-greeting.mp3"></audio>
+                            
+                            <button class="call-action-btn" id="call-btn" onclick="toggleVoiceCall()">
+                                <span class="btn-text">Initiate Call</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Mockup (Chart + Alerts) -->
+                    <div class="dashboard-widget hover-tilt">
+                        <div class="dashboard-header">
+                            <h4>Operations Dashboard</h4>
+                            <span class="pulse-indicator">LIVE DATA</span>
+                        </div>
+                        
+                        <div class="dashboard-content">
+                            <!-- Chart Area -->
+                            <div class="chart-container">
+                                <h5>Predicted Rush Hours vs. Staffing Levels</h5>
+                                <div class="canvas-wrapper">
+                                    <canvas id="rushHourChart"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Resturant Reorder Alerts Area -->
+                            <div class="alerts-container">
+                                <h5>Automated Ingredient Reorder Alerts</h5>
+                                <ul class="alerts-list" id="alerts-list">
+                                    <li class="alert-item high-priority">
+                                        <div class="alert-icon">⚠️</div>
+                                        <div class="alert-text">
+                                            <strong>Avocados (Case)</strong>
+                                            <span>Projected stockout by 6:00 PM based on Taco Tuesday trends. Auto-ordering 3 cases from supplier.</span>
+                                        </div>
+                                    </li>
+                                    <li class="alert-item medium-priority">
+                                        <div class="alert-icon">🔄</div>
+                                        <div class="alert-text">
+                                            <strong>Premium Ground Beef</strong>
+                                            <span>Inventory at 18%. Reordering threshold met. Scheduled for tomorrow morning delivery.</span>
+                                        </div>
+                                    </li>
+                                    <li class="alert-item low-priority">
+                                        <div class="alert-icon">✅</div>
+                                        <div class="alert-text">
+                                            <strong>Brioche Buns</strong>
+                                            <span>Restocked successfully. Current inventory: 400 units (Optimal for weekend projections).</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SMS Marketing Mockup Section -->
+                    <div class="sms-promo-container hover-tilt">
+                        <div class="sms-promo-left">
+                            <div class="promo-graphic">
+                                <div class="promo-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--neon-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                </div>
+                                <h3 class="promo-headline text-glow">Automated SMS Marketing</h3>
+                                <div class="promo-callout">
+                                    <span>Text <strong>YOUR COMPANY</strong> to</span>
+                                    <span class="promo-number text-glow">555-0199</span>
+                                </div>
+                                <p class="promo-desc">Seamlessly acquire customers, process opt-ins, and trigger intelligent remarketing campaigns with zero manual intervention.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="sms-promo-right">
+                            <!-- Mobile Phone Mockup -->
+                            <div class="phone-mockup">
+                                <div class="phone-notch"></div>
+                                <div class="phone-header">
+                                    <span>555-0199</span>
+                                </div>
+                                <div class="phone-screen" id="sms-screen">
+                                    <!-- Messages added via JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;">
+                        <a href="leons-ai.html#solutions" class="cta-button" style="display: inline-block;">View Pricing on Home Page</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="practical-use" class="content-section section-bg-2">
+            <div class="glass-overlay staggered-fade">
+                <h2 class="section-title text-glow">For Practical Use</h2>
+                <p class="section-subtitle">Robust utilities to significantly accelerate day-to-day workflows.</p>
+                <div class="content-grid">
+                     <div class="card hover-tilt">
+                        <div class="card-icon">03</div>
+                        <h3>Automated Knowledge Base</h3>
+                        <p>Transform meeting audio and scattered notes into structured, searchable action items immediately.</p>
+                    </div>
+                    <div class="card hover-tilt">
+                        <div class="card-icon">04</div>
+                        <h3>Inventory Prediction</h3>
+                        <p>Machine-learning driven stock optimization based on historical, seasonal, and trending real-time data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="in-development" class="content-section section-bg-3">
+            <div class="glass-overlay staggered-fade">
+                <h2 class="section-title text-glow">In Development</h2>
+                <p class="section-subtitle">Exploring the bleeding edge of autonomous agent architectures.</p>
+                <div class="content-grid">
+                    <div class="card highlight-card hover-tilt">
+                        <div class="card-icon data-stream"></div>
+                        <h3>Multi-modal AI Agent</h3>
+                        <p>A comprehensive system seamlessly processing text, voice, and visual inputs for complex, multi-step task execution and enterprise integration.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 73%;"></div>
+                        </div>
+                        <p class="progress-text">Beta Phase - 73% complete</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="core-competencies" class="content-section">
+            <div class="glass-overlay staggered-fade">
+                <h2 class="section-title text-glow">Core Competencies</h2>
+                <div class="skills-container">
+                    <div class="skill-card bordered-card">
+                        <div class="skill-header">
+                            <h3>Prompt Engineering</h3>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                        <p>Expertise in context framing, chain-of-thought execution strategies, adversarial testing, and enterprise system prompt optimization.</p>
+                        <ul class="skill-tags">
+                            <li>Few-Shot Learning</li>
+                            <li>Instruction Tuning</li>
+                            <li>RAG Patterns</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card bordered-card">
+                         <div class="skill-header">
+                            <h3>AI Integration</h3>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                        <p>Seamless LLM API implementation into existing codebases, custom model fine-tuning orchestration, and complex workflow automation.</p>
+                        <ul class="skill-tags">
+                            <li>OpenAI / Anthropic</li>
+                            <li>LangChain / LlamaIndex</li>
+                            <li>Vector DBs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-links mt-8">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span>Connect on LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a href="mailto:your.email@gmail.com?subject=AI Consultation Inquiry" class="cta-button rainbow-glow">
+                <span class="cta-text">Book an Appointment</span>
+                <span class="cta-action-icon">→</span>
+            </a>
+            <p class="footer-legal">&copy; 2026 Sample Products Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
